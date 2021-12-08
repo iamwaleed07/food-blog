@@ -1,33 +1,29 @@
-@include Responsive($iPad-Pro) {
+@include Responsive($IPad-pro) {
     .main_section {
         @include Flex(column);
-
         .section {
             justify-content: space-evenly;
-
-            .card {
-                width: 300px;
-                margin-bottom: 2rem;
-            }
-
-            img {
-                max-height: 400px;
-                width: 100%;
-            }
+        .card {
+            width: 300px;
+            margin-bottom: 2rem;
+        }
+        img {
+            max-height: 400px;
+            width: 100%;
         }
     }
+    }
 }
-@include Responsive($iPad) {
+@include Responsive($IPad) {
     .main_section {
         @include Flex();
-
         .section {
             .card {
                 .text-lg {
-                    font-size: $xl_font-size;
+                    font-size: $xl_font_size;
                 }
                 p {
-                    font-size: $lg_font-size;
+                    font-size: $lg_font_size;
                 }
             }
         }
@@ -37,11 +33,10 @@
         @include Flex(column);
         justify-content: space-around;
         align-items: center;
-
         .footer {
             width: 100%;
+            
         }
-
         .footer_1 {
             align-items: center;
             padding: 0.5rem 2rem;
@@ -51,26 +46,26 @@
                 i {
                     padding: 1rem;
                 }
+                
             }
+            
         }
-
         .footer_2 {
             &-contact {
                 @include Flex();
                 li {
                     padding: 2rem;
-                }
+                } 
             }
 
             .inner-content {
                 h6,
                 p {
-                    font-size: $lg_font-size;
+                    font-size: $lg_font_size;
                 }
                 margin: 0 2rem;
             }
         }
-
         .footer_3 {
             padding: 2rem;
             .tags {
@@ -79,22 +74,22 @@
                 }
             }
         }
+
     }
 }
-
-@include Responsive($iPhone-X) {
+@include Responsive($iPhone-x) {
     .nav {
         li {
             &:first-child,
             &:nth-child(3) {
                 .nav-item {
                     font-size: $base-font-size;
+                    
                 }
             }
-
             &:nth-child(2) {
                 .nav-item {
-                    font-size: $lg_font-size;
+                    font-size: $lg_font_size;
                 }
             }
         }
@@ -103,12 +98,11 @@
     .main_section {
         .section {
             justify-content: space-evenly;
-
             .card {
                 width: 300px;
                 margin-bottom: 4rem;
-            }
 
+            }
             img {
                 max-height: 700px;
             }
@@ -120,42 +114,41 @@
             height: 230px;
             max-width: 300px;
         }
-
         p {
             margin: 2rem;
         }
     }
 
     .section-footer {
-        @include Flex(column);
+        @include Flex (column);
         justify-content: space-around;
         align-items: center;
-
         .footer_1 {
-            @include Flex(column);
+            @include Flex (column);
             padding: 1rem 2rem;
-
-            .footer_content {
-                @include Flex(column);
+            .footer_contact {
+                @include Flex (column);
+                
             }
+            
         }
-
+        
         .footer_2 {
             &-contact {
-                @include Flex(column);
-                li {
-                    @include Flex();
+                @include Flex (column);
+                li{
+                    @include Flex ();
                     padding: 1.5rem;
-
                     .inner-content {
                         padding: 0.5rem;
-
                         h6,
                         p {
                             text-align: center;
                         }
                     }
+
                 }
+
             }
         }
     }

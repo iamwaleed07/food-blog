@@ -7,69 +7,72 @@
     font-size: 16px;
     scroll-behavior: smooth;
 }
-@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap");
+
 body {
     font-family: "Raleway", sans-serif;
     line-height: 1.5;
-    letter-spacing: .3px;
+    letter-spacing: 0.3px;
     max-width: 1200px;
     margin: auto;
 }
-// * Color Variables
+//color
+//variables
+
 $prim-c: #111;
 $sec-c: #333;
 $light-c: #fff;
-$Facebook: #395599;
+$FaceBook: #395599;
 $Instagram: #c32f82;
 $Twitter: #1c9deb;
 $Printerest: #d73532;
-$LinkedIn: #4064ad;
+$Linkedin: #4064ad;
 $YouTube: #f80000;
 
-// * Responsive Variables
-$iPad-Pro: 1024px;
-$iPad: 768px;
-$iPhone-X: 375px;
+// resbonsive Variables
 
-// * Font Variables
+$IPad-pro: 1024px;
+$IPad: 768px;
+$iPhone-x: 375px;
+
+//font Variables
 $base-font-size: 16px;
-$sm_font-size: $base-font-size * 0.8;
-$lg_font-size: $base-font-size * 1.4;
-$xl_font-size: $base-font-size * 1.8;
+$sm_font_size: $base-font-size * 0.8;
+$lg_font_size: $base-font-size * 1.4;
+$xl_font_size: $base-font-size * 1.8;
 
-// * Maps
-$Font_size: (
-    "sm": $sm_font-size,
-    "lg": $lg_font-size,
-    "xl": $xl_font-size,
+//Mape
+$font_size: (
+    "sm" $sm_font_size,
+    "lg" $lg_font_size,
+    "xl" $xl_font_size,
 );
-@each $size_name, $size_value in $Font_size {
+@each $size_name, $size_value in $font_size {
     .text {
         &-#{$size_name} {
             font-size: $size_value;
         }
     }
-};
-$Text-positioning: (
+}
+
+$Text-position: (
     "center": center,
     "right": right,
 );
-@each $position_name, $position_value in $Text-positioning {
+
+@each $position_name, $position_value in $Text-position {
     .#{$position_name} {
         text-align: $position_value;
     }
 }
 
-// * MIXIN's
-
-// Flex
-@mixin Flex($direction: row) {
+@mixin Flex($derection: row) {
     display: flex;
-    flex-direction: $direction;
+    flex-direction:$derection ;
+    
 }
-// Responsive
 @mixin Responsive($display) {
-    @media (max-width: $display) {
-        @content
-    }
+ @media (max-width: $display) {
+     @content
+ }
 }
